@@ -1,5 +1,5 @@
 html, body {
-    overflow: hidden; /* Ngăn cuộn */
+    overflow: hidden; 
     height: 100%;
     width: 100%;
     touch-action: none; /* Chặn thao tác phóng to trên mobile */
@@ -25,7 +25,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Màu nền nhẹ để dễ thấy frame */
+    background-color: #f0f0f0; 
 }
 
 .frame {
@@ -44,7 +44,7 @@ body, html {
 }
 
 input, button, a {
-    pointer-events: auto; /* Cho phép tương tác với các phần tử này */
+    pointer-events: auto; 
 }
 
 .header-container{
@@ -112,9 +112,9 @@ input, button, a {
 }
 
 .form-group {
-    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
-    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của container cha */
-    margin-bottom: 20px; /* Khoảng cách giữa các ô nhập liệu */
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
 }
 
 label {
@@ -135,7 +135,7 @@ input[type="password"] {
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s;
-    pointer-events: auto; /* Đảm bảo có thể nhập liệu */
+    pointer-events: auto; 
 }
 
 input[type="text"]:focus,
@@ -170,7 +170,7 @@ input[type="password"]:focus {
 }
 
 .toggle-password.active .closeeye-icon {
-    transform: scale(1.2); /* Phóng to một chút để tạo hiệu ứng mắt mở ra */
+    transform: scale(1.2); 
 }
 
 .openeye-icon {
@@ -182,7 +182,7 @@ input[type="password"]:focus {
 }
 
 .toggle-password.active .openeye-icon {
-    transform: scale(1.2); /* Phóng to một chút để tạo hiệu ứng mắt mở ra */
+    transform: scale(1.2); 
 }
 
 .remember-me {
@@ -198,7 +198,7 @@ input[type="password"]:focus {
     margin-right: 8px;
     width: 18px;
     height: 18px;
-    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    pointer-events: auto; 
 }
 
 .remember-me label {
@@ -245,7 +245,7 @@ input[type="password"]:focus {
     font-weight: 500;
     text-decoration: none;
     margin-left: 5px;
-    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    pointer-events: auto; 
 }
 
 .create-account a:hover {
@@ -279,7 +279,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; /* Màu nền nhẹ để dễ thấy frame */
+    background-color: #f0f0f0; 
 }
 
 .frame {
@@ -358,7 +358,7 @@ input, button, a {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
-    text-align: left; /* Chỉnh sang trái */
+    text-align: left; 
 }
 
 .login-form {
@@ -366,9 +366,9 @@ input, button, a {
 }
 
 .form-group {
-    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
-    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của container cha */
-    margin-bottom: 20px; /* Khoảng cách giữa các ô nhập liệu */
+    width: 100%; 
+    max-width: 100%; 
+    margin-bottom: 20px; 
 }
 
 label {
@@ -389,7 +389,7 @@ input[type="password"] {
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s;
-    pointer-events: auto; /* Đảm bảo có thể nhập liệu */
+    pointer-events: auto; 
 }
 
 input[type="text"]:focus,
@@ -411,7 +411,7 @@ input[type="password"]:focus {
     background: none;
     border: none;
     cursor: pointer;
-    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    pointer-events: auto; 
     padding: 0;
 }
 
@@ -424,7 +424,7 @@ input[type="password"]:focus {
 }
 
 .toggle-password.active .closeeye-icon {
-    transform: scale(1.2); /* Phóng to một chút để tạo hiệu ứng mắt mở ra */
+    transform: scale(1.2); 
 }
 
 .openeye-icon {
@@ -452,7 +452,7 @@ input[type="password"]:focus {
     margin-right: 8px;
     width: 18px;
     height: 18px;
-    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    pointer-events: auto; 
 }
 
 .remember-me label {
@@ -472,7 +472,7 @@ input[type="password"]:focus {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s;
-    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    pointer-events: auto; 
 }
 
 .sign-in-button:hover {
@@ -534,7 +534,7 @@ input[type="password"]:focus {
 }
 
 #dob::placeholder {
-    color: #999; /* Màu xám */
+    color: #999; 
     opacity: 1; /* Đảm bảo placeholder không bị mờ */
 }
 
