@@ -31,7 +31,6 @@ body, html {
 .frame {
     width: 525px;
     height: 853px;
-    
     background-color: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.2);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -113,8 +112,9 @@ input, button, a {
 }
 
 .form-group {
-    margin-bottom: 20px;
-    width: 100%;
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của container cha */
+    margin-bottom: 20px; /* Khoảng cách giữa các ô nhập liệu */
 }
 
 label {
@@ -129,7 +129,261 @@ label {
 input[type="text"],
 input[type="password"] {
     font-family: 'Inter', sans-serif;
+    width: 421px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    pointer-events: auto; /* Đảm bảo có thể nhập liệu */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.password-container {
+    position: relative;
     width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    padding: 0;
+}
+
+.closeeye-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-password.active .closeeye-icon {
+    transform: scale(1.2); /* Phóng to một chút để tạo hiệu ứng mắt mở ra */
+}
+
+.openeye-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.toggle-password.active .openeye-icon {
+    transform: scale(1.2); /* Phóng to một chút để tạo hiệu ứng mắt mở ra */
+}
+
+.remember-me {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.remember-me input[type="checkbox"] {
+    font-family: 'Inter', sans-serif;
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+}
+
+.remember-me label {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.sign-in-button {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    padding: 14px;
+    background-color: #FFD700;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+    margin-top: 20px;
+}
+
+.sign-in-button:hover {
+    background-color: #F3C200;
+}
+
+.create-account {
+    font-family: 'Inter', sans-serif;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top:10px;
+}
+
+.create-account span {
+    color: #666;
+}
+
+.create-account a {
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 5px;
+    pointer-events: auto; /* Đảm bảo có thể nhấp vào */
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+html, body {
+    overflow: hidden; /* Ngăn cuộn */
+    height: 100%;
+    width: 100%;
+    touch-action: none; /* Chặn thao tác phóng to trên mobile */
+}
+
+body {
+    background-image: url('../assets/register-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 16/9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Màu nền nhẹ để dễ thấy frame */
+}
+
+.frame {
+    width: 525px;
+    height: 853px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    border-radius: 15px;
+}
+
+input, button, a {
+    pointer-events: auto; /* Cho phép tương tác với các phần tử này */
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:20px;
+    left: 0;
+    right:0;
+    width: 100%;
+}
+
+.header-text{
+    font-family: 'Inter', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    color:000000;
+    margin-top: 50px;
+    letter-spacing: -2.5px;
+}
+
+
+.logo{
+    width: 50px;
+    height: 50px;
+    margin-right: 10 px;
+    background-image: url('../assets/logo.png') ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 52px;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Chỉnh sang trái */
+    padding: 0 50px; /* Tăng padding để các phần tử thẳng hàng */
+    margin-top: 250px;
+}
+
+.form-title {
+    font-family: 'Inter', sans-serif;
+    color:000000;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left; /* Chỉnh sang trái */
+    letter-spacing: -1px;
+
+}
+
+.form-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: left; /* Chỉnh sang trái */
+}
+
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
+    max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của container cha */
+    margin-bottom: 20px; /* Khoảng cách giữa các ô nhập liệu */
+}
+
+label {
+    font-family: 'Inter', sans-serif;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-family: 'Inter', sans-serif;
+    width: 421px;
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -250,3 +504,41 @@ input[type="password"]:focus {
     text-decoration: underline;
 }
 
+/* Định dạng ô select trong form-group */
+.form-group select {
+    font-family: 'Inter', sans-serif;
+    width: 421px; /* Đồng bộ với chiều rộng của input */
+    padding: 12px 15px; /* Đồng bộ với padding của input */
+    border: 1px solid #ddd; /* Đồng bộ với border của input */
+    border-radius: 6px; /* Đồng bộ với border-radius của input */
+    font-size: 16px; /* Đồng bộ với font-size của input */
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s; /* Đồng bộ hiệu ứng với input */
+    pointer-events: auto; /* Đảm bảo có thể tương tác */
+    appearance: none; /* Loại bỏ kiểu mặc định của trình duyệt */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Hiệu ứng khi hover hoặc focus */
+.form-group select:hover,
+.form-group select:focus {
+    border-color: #FFD700; /* Đồng bộ với màu khi focus của input */
+    outline: none;
+}
+
+/* Định dạng option mặc định (disabled) */
+.form-group select option[disabled] {
+    color: #999; /* Màu xám nhạt để phân biệt */
+}
+
+#dob::placeholder {
+    color: #999; /* Màu xám */
+    opacity: 1; /* Đảm bảo placeholder không bị mờ */
+}
+
+/* Khi người dùng bắt đầu nhập, màu sắc sẽ trở lại bình thường */
+#dob:focus::placeholder {
+    color: transparent;
+}

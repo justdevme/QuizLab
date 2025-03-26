@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Sign Up - QuizLab</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="frame">
+            <div class="header-container">
+                <div class="header-text">QuizLab</div>
+                <div class="logo"></div>
+            </div>
+            
+            <div class="form-container">
+                <!-- Sign Up Form -->
+                <div id="signupform">
+                    <h2 class="form-title">Sign up</h2>
+                    <p class="form-subtitle">Challenge your knowledge with QuizLab!</p>
+                    
+                    <form class="signup-form">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Date of Birth</label>
+                            <input type="text" id="dob" placeholder="dd/mm/yyyy" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-container">
+                                <input type="password" id="password" required>
+                                <button type="button" class="toggle-password">
+                                    <img src='assets/close-eye.png' alt="toggle-password" class="closeeye-icon">
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Ô lựa chọn chủ đề để khôi phục mật khẩu -->
+                    <div class="form-group">
+                        <label for="security-question">Security Question (for password recovery)</label>
+                        <select id="security-question" name="security-question" required>
+                            <option value="" disabled selected>Select a topic</option>
+                            <option value="train">Tàu hỏa</option>
+                            <option value="swimming_pool">Bể bơi</option>
+                            <option value="apple">Quả táo</option>
+                            <option value="wool_hat">Mũ len</option>
+                            <option value="singer">Ca sĩ</option>
+                            <option value="graphics_card">Card đồ họa</option>
+                            <option value="banh_cuon">Bánh cuốn</option>
+                        </select>
+                    </div>
+                    
+                        
+                        <button type="submit" class="sign-in-button">Sign up</button>
+                    </form>
+                    
+                    <div class="create-account">
+                        <span>Already have an account?</span>
+                        <a href="sign-in.html" id="signInLink">Sign in</a> <!-- Liên kết đến trang Sign In -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+    </html>
